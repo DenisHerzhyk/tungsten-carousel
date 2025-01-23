@@ -1,0 +1,31 @@
+.indicators {
+  &__container {
+    position: absolute;
+    z-index: 101;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    gap: $INDICATORS_GAP;
+
+  }
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $COLOR_WHITE;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: $COLOR_GRAY;
+    cursor: pointer;
+  }
+}
+
+.active {
+  background-color: $COLOR_PRIMARY_CONTRAST;
+  &:hover {
+    background-color: $COLOR_PRIMARY_CONTRAST;
+  }
+}

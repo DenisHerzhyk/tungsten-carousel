@@ -1,0 +1,12 @@
+.main {
+  &__container {
+    position: relative;
+    margin: 100px auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: $SLIDE_WIDTH;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

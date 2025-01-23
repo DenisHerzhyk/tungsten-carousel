@@ -1,0 +1,31 @@
+.footer {
+  padding-top: 100px;
+  position: relative;
+  &__container {
+    position: absolute;
+
+    width: 100%;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__link {
+    color: $COLOR_WHITE;
+    font-size: $FONT_SM;
+  }
+}
+
+.social {
+  &__links {
+    margin-bottom: 20px;
+    i {
+      color: $COLOR_WHITE;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $COLOR_PRIMARY;
+      }
+    }
+  }
+}

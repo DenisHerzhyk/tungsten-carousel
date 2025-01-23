@@ -1,0 +1,29 @@
+.header {
+  width: 100vw;
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px 15px 80px;
+    z-index: 1;
+  }
+  &__logo {
+    width: $SIZE_LOGO;
+  }
+  &__link {
+    color: $COLOR_WHITE;
+    font-size: $FONT_SM;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $COLOR_PRIMARY;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: $NAV_GAP;
+  }
+}

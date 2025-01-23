@@ -1,0 +1,250 @@
+body {
+  font-family: "JetBrains Mono", monospace;
+  background-color: black;
+  background-image: url("/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  min-width: 530px;
+  width: 100vw;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  width: 100vw;
+}
+.header__container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 80px 15px 80px;
+  z-index: 1;
+}
+.header__logo {
+  width: 90px;
+}
+.header__link {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+.header__link:hover {
+  color: #aa82ee;
+}
+.header__list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.main__container {
+  position: relative;
+  margin: 100px auto;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides__container {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid #aa82ee;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: relative;
+  filter: brightness(80%);
+  overflow: hidden;
+  padding: 0 10px;
+  height: 600px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  opacity: 0;
+  box-shadow: 0 0 100px 20px rgba(170, 130, 238, 0.3);
+  transition: opacity 0.3s ease;
+}
+.slide.active {
+  display: block;
+  opacity: 1;
+  z-index: 100;
+}
+
+.slide:nth-of-type(1) {
+  background-image: url("../../images/slide1.png");
+}
+
+.slide:nth-of-type(2) {
+  background-image: url("../../images/slide2.png");
+}
+
+.slide:nth-of-type(3) {
+  background-image: url("../../images/slide3.png");
+}
+
+.slide:nth-of-type(4) {
+  background-image: url("../../images/slide4.png");
+}
+
+.slide:nth-of-type(5) {
+  background-image: url("../../images/slide5.png");
+}
+
+.indicators__container {
+  position: absolute;
+  z-index: 101;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  gap: 20px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+.indicator:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #6547e0;
+}
+.active:hover {
+  background-color: #6547e0;
+}
+
+.control__container {
+  position: absolute;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.control__pause-btn, .control__next-btn, .control__prev-btn {
+  width: 40px;
+  height: 100%;
+  padding: 0 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.2;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color, opacity 0.5s ease-out;
+}
+.control__pause-btn i, .control__next-btn i, .control__prev-btn i {
+  font-size: 24px;
+}
+.control__pause-btn:hover, .control__next-btn:hover, .control__prev-btn:hover {
+  opacity: 1;
+}
+.control__prev-btn:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+.control__next-btn:hover {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+.control__pause-btn {
+  opacity: 0;
+  transition: opacity 0.3s;
+  height: 40px;
+  padding: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.control__pause-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 1;
+}
+
+.footer {
+  padding-top: 100px;
+  position: relative;
+}
+.footer__container {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__link {
+  color: white;
+  font-size: 14px;
+}
+
+.social__links {
+  margin-bottom: 20px;
+}
+.social__links i {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+.social__links i:hover {
+  color: #aa82ee;
+}
+
+/*# sourceMappingURL=style.css.map */
