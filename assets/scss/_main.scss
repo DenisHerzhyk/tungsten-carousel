@@ -8,5 +8,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include md {
+      margin: 50px auto;
+    }
   }
 }

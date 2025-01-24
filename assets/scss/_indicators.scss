@@ -17,9 +17,9 @@
   border-radius: 50%;
   background-color: $COLOR_WHITE;
   transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
   &:hover {
     background-color: $COLOR_GRAY;
-    cursor: pointer;
   }
 }
 

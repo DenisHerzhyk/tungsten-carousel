@@ -2,6 +2,7 @@
  &__container {
    position: relative;
    max-width: $SLIDE_WIDTH;
+   min-width: $SLIDE_MIN_WIDTH;
    width: 100%;
    margin: 0 auto;
    border-radius: 5px;

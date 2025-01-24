@@ -1,16 +1,13 @@
 body {
   font-family: $FONT_FAMILY;
-  background-color: black;
+  background-color: $COLOR_BLACK;
   background-image: url("../../images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 0;
-  min-width: 530px;
+  min-width: 430px;
   width: 100vw;
-}
-
-html {
   overflow-x: hidden;
 }
 
@@ -24,7 +21,7 @@ html, body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: $COLOR_BLACK;
 }
 
 ul {

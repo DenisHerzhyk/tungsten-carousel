@@ -1,5 +1,4 @@
 .header {
-  width: 100vw;
   &__container {
     position: relative;
     display: flex;
@@ -8,6 +7,10 @@
     justify-content: space-between;
     padding: 15px 80px 15px 80px;
     z-index: 1;
+    width: 100%;
+    @include md {
+      flex-direction: column;
+    }
   }
   &__logo {
     width: $SIZE_LOGO;

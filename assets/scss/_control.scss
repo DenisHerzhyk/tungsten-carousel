@@ -17,13 +17,13 @@
     width: 40px;
     height: 100%;
     padding: 0 50px;
-    color: white;
+    color: $COLOR_WHITE;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     opacity: 0.2;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba($COLOR_BLACK, 0.0);
     transition: background-color, opacity 0.5s ease-out;
     i {
       font-size: 24px;
@@ -34,12 +34,12 @@
   }
   &__prev-btn {
     &:hover {
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0,0,0, 0));
+      background: linear-gradient(to right, rgba($COLOR_BLACK, 0.8), rgba($COLOR_BLACK, 0));
     }
   }
   &__next-btn {
     &:hover {
-      background: linear-gradient(to left, rgba(0,0,0,0.8), rgba(0,0,0,0));
+      background: linear-gradient(to left, rgba($COLOR_BLACK,0.8), rgba($COLOR_BLACK,0));
     }
   }
   &__pause-btn {
@@ -48,9 +48,9 @@
     height: 40px;
     padding: 30px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba($COLOR_BLACK, 0.5);
     &:hover {
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: rgba($COLOR_BLACK, 0.9);
       opacity: 1;
     }
   }

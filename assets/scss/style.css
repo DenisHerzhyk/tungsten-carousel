@@ -6,11 +6,8 @@ body {
   background-size: cover;
   background-position: center;
   margin: 0;
-  min-width: 530px;
+  min-width: 430px;
   width: 100vw;
-}
-
-html {
   overflow-x: hidden;
 }
 
@@ -45,9 +42,6 @@ li {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.header {
-  width: 100vw;
-}
 .header__container {
   position: relative;
   display: flex;
@@ -56,6 +50,12 @@ li {
   justify-content: space-between;
   padding: 15px 80px 15px 80px;
   z-index: 1;
+  width: 100%;
+}
+@media (max-width: 767.8px) {
+  .header__container {
+    flex-direction: column;
+  }
 }
 .header__logo {
   width: 90px;
@@ -85,10 +85,16 @@ li {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 767.8px) {
+  .main__container {
+    margin: 50px auto;
+  }
+}
 
 .slides__container {
   position: relative;
   max-width: 1200px;
+  min-width: 400px;
   width: 100%;
   margin: 0 auto;
   border-radius: 5px;
@@ -155,10 +161,10 @@ li {
   border-radius: 50%;
   background-color: white;
   transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
 }
 .indicator:hover {
   background-color: gray;
-  cursor: pointer;
 }
 
 .active {
