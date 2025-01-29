@@ -96,20 +96,22 @@ li {
   max-width: 1200px;
   min-width: 400px;
   width: 100%;
+  height: 600px;
   margin: 0 auto;
   border-radius: 5px;
-  border: 1px solid #aa82ee;
+  border: 0.5px solid #aa82ee;
   overflow: hidden;
 }
 
 .slide {
-  display: none;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   filter: brightness(80%);
   overflow: hidden;
   padding: 0 10px;
-  height: 600px;
-  width: 100%;
   background-position: center;
   background-size: cover;
   margin-left: auto;
@@ -120,9 +122,8 @@ li {
   transition: opacity 0.3s ease;
 }
 .slide.active {
-  display: block;
   opacity: 1;
-  z-index: 100;
+  z-index: 101;
 }
 
 .slide:nth-of-type(1) {
@@ -186,7 +187,7 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-.control__pause-btn, .control__next-btn, .control__prev-btn {
+.control__pause-btn, .control__next-btn, .control__prev-btn, .control__play-btn {
   width: 40px;
   height: 100%;
   padding: 0 50px;
@@ -199,11 +200,8 @@ li {
   background-color: rgba(0, 0, 0, 0);
   transition: background-color, opacity 0.5s ease-out;
 }
-.control__pause-btn i, .control__next-btn i, .control__prev-btn i {
+.control__pause-btn i, .control__next-btn i, .control__prev-btn i, .control__play-btn i {
   font-size: 24px;
-}
-.control__pause-btn:hover, .control__next-btn:hover, .control__prev-btn:hover {
-  opacity: 1;
 }
 .control__prev-btn:hover {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
@@ -211,17 +209,15 @@ li {
 .control__next-btn:hover {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
-.control__pause-btn {
-  opacity: 0;
+.control__pause-btn, .control__play-btn {
   transition: opacity 0.3s;
   height: 40px;
   padding: 30px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.control__pause-btn:hover {
+.control__pause-btn:hover, .control__play-btn:hover {
   background-color: rgba(0, 0, 0, 0.9);
-  opacity: 1;
 }
 
 .footer {
