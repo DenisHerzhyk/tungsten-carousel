@@ -9,6 +9,8 @@ class SwipeCarousel extends Carousel {
         super._initListeners();
         this.slideContainer.addEventListener('touchstart', this._handleStart.bind(this), { passive: true });
         this.slideContainer.addEventListener('touchend', this._handleEnd.bind(this));
+        this.slideContainer.addEventListener('mousedown', this._handleStart.bind(this));
+        this.slideContainer.addEventListener('mouseup', this._handleEnd.bind(this));
     }
     _handleStart(event) {
         this.startPositionX = event instanceof MouseEvent ? event.pageX : event.changedTouches[0].pageX;
